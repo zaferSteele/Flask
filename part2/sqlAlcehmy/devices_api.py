@@ -3,6 +3,17 @@
 # list, retrieve, create, and update network devices stored in a
 # SQLite database.
 
+# Example commdands that you can run with this script:
+# http POST http://192.168.255.3:5000/devices/ 'hostname'='lax-edg-r1' 'loopback'='192.168.0.10' 'mgmt_ip'='192.168.2.51' 'role'='spine' 'vendor'='Cisco' 'os'='15.8'
+# http POST http://192.168.255.3:5000/devices/ 'hostname'='lax-edg-r2' 'loopback'='192.168.0.11' 'mgmt_ip'='192.168.2.52' 'role'='spine' 'vendor'='Cisco' 'os'='15.8'
+# http POST http://192.168.2.126:5000/devices/ 'hostname'='nyc-edg-r1' 'loopback'='192.168.0.12' 'mgmt_ip'='192.168.2.61' 'role'='leaf' 'vendor'='Cisco' 'os'='15.8'
+
+# http GET http://192.168.255.3:5000/devices/
+# http GET http://192.168.255.3:5000/devices/1
+
+# http PUT http://192.168.255.3:5000/devices/1 'hostname'='lax-edg-r1' 'loopback'='192.168.0.10' 'mgmt_ip'='192.168.2.51' 'role'='spine' 'vendor'='Cisco' 'os'='14.6'
+
+
 from flask import Flask, url_for, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 
