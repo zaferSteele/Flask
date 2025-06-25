@@ -16,6 +16,7 @@
 
 from flask import Flask, url_for, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
+from ssh_show_version import show_version
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -99,6 +100,7 @@ def edit_device(id):
     db.session.add(device)
     db.session.commit()
     return jsonify({})
+
 
 # Run the application and create tables if necessary
 if __name__ == '__main__':
