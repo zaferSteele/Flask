@@ -1,4 +1,4 @@
-<h1 align="center"> Flask for Network Automation </h1>
+<h1 align="center"> Zafer Steele's Flask for Network Automation </h1>
 
 <p align="center">
 <img src="assets/flask-network-icon.png" alt="Network Security Toolkit" width="100">
